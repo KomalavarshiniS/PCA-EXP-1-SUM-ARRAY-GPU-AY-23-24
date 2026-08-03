@@ -28,11 +28,16 @@ Google Colab with NVCC Compiler
 5. Launch a CUDA kernel to perform vector addition on the device.
 6. Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
 
-## PROGRAM:
+## PROGRAM AND OUTPUT:
 ```
 !pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
 %load_ext nvcc4jupyter
 ```
+
+<img width="1722" height="361" alt="image" src="https://github.com/user-attachments/assets/7c98c996-c4e5-4e8a-a57a-838592cf96a9" />
+
+
+
 
 ```
 %%cuda
@@ -47,23 +52,38 @@ int main(){
   return 0;
 }
 ```
+<img width="1137" height="258" alt="image" src="https://github.com/user-attachments/assets/e83ee6cb-4c30-4c22-848b-7eac5bb97c47" />
+
+
+
 
 ```
 !nvcc --version
 ```
+<img width="582" height="127" alt="image" src="https://github.com/user-attachments/assets/2bcb3353-a0fe-4f9e-b219-990d11da4190" />
+
+
 
 ```
 !nvcc -arch=sm_75 hello.cu -o hello
 ```
+<img width="658" height="65" alt="image" src="https://github.com/user-attachments/assets/9d070027-8bad-4099-ac40-b06f7ec1d0c9" />
+
+
 
 ```
 !./hello
 ```
+<img width="702" height="45" alt="image" src="https://github.com/user-attachments/assets/e2378394-4386-4013-83f9-5639e465fc8d" />
+
 
 
 ```
 !nvidia-smi
 ```
+<img width="1217" height="457" alt="image" src="https://github.com/user-attachments/assets/cc055ba4-1d78-49f1-a6c2-e6a8c5bacc8f" />
+
+
 
 
 ```
@@ -323,9 +343,10 @@ int main(int argc, char **argv)
     return(0);
 }
 ```
+<img width="862" height="216" alt="image" src="https://github.com/user-attachments/assets/931b4964-5811-4ef7-9334-a3204894fce3" />
 
-## OUTPUT:
-SHOW YOUR OUTPUT HERE
+
+
 
 ## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
